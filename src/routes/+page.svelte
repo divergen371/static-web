@@ -1,12 +1,10 @@
-<script>
-	import Header from '$lib/header/Header.svelte';
-	import Footer from '$lib/footer/Footer.svelte';
-</script>
-
 <svelte:head>
 	<title>トップページです</title>
 </svelte:head>
 
+<main>
+    <h1 class="hello">Hello</h1>
+</main>
 <style lang="scss">
 	main {
 		.hello {

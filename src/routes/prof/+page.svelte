@@ -1,8 +1,7 @@
 <script>
-	const myName = 'hoge';
-	const description = "It's me!!";
-	import Header from '$lib/header/Header.svelte';
-	import Footer from '$lib/footer/Footer.svelte';
+	import Profile from '$lib/Profile/profile.svelte';
+    const myName = 'hoge';
+	const description = "It's me!!"
 </script>
 
 <svelte:head>
@@ -10,14 +9,11 @@
 </svelte:head>
 
 <div class="profile">
-	<div><img src="1.3-FastAPI-Logo.jpg" alt="" /></div>
+	<div><img src="IMG_6060.PNG" alt="" /></div>
 	<h1>{myName}</h1>
 	<div class="description">{description}</div>
 	<h2>経歴</h2>
 	<ul class="list-disc">
-		<li>すごい学校をすごい成績でおさめる</li>
-		<li>すごい会社にすごい勢いで入社</li>
-		<li>すごいので退社</li>
-		<li>現在に至る</li>
+		<Profile />
 	</ul>
 </div>
