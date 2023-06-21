@@ -5,7 +5,8 @@
 	const NAV_MENU = [
 		{ href: '/', title: 'Home' },
 		{ href: '/prof/', title: 'Profile' },
-		{ href: '/faq/', title: 'FAQ' }
+		{ href: '/faq/', title: 'FAQ' },
+		{ href: '/favoritebooks/', title: 'Favorite Books' }
 	];
 </script>
 
