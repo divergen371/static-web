@@ -1,6 +1,7 @@
 <script>
 	import BookList from '$lib/booklist/BookList.svelte';
-	const ISBN = '4621066080,4274226379';
+	import { favoriteBooks } from '$lib/store';
+	const ISBN = $favoriteBooks;
 </script>
 
 <svelte:head>
