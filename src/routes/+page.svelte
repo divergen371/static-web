@@ -1,36 +1,23 @@
 <script>
-	let title = '楽しいSvelteKit';
+	import Header from '$lib/header/Header.svelte';
+	import Footer from '$lib/footer/Footer.svelte';
 </script>
 
-<header>
-	<h1>{title}</h1>
-	<p>HTMLとCSSとJavascriptでつくるWebの世界</p>
-</header>
+<Header />
 
 <main>
 	<div class="hello">Hello World</div>
+	<div>
+		<h2>明日公開されるべき重大発表</h2>
+		<p>なんとここには、明日公開されるべき重大な発表内容が掲載されます</p>
+	</div>
 </main>
-
-<footer>
-	<p>Created by fukMnk</p>
-</footer>
+<Footer />
 
 <style lang="scss">
-	header {
-		h1 {
-			font-size: 2em;
-		}
-	}
-
 	main {
 		.hello {
 			font-weight: bold;
-		}
-	}
-
-	footer {
-		p {
-            @apply text-slate-500 p-2 border border-solid border-slate-300
 		}
 	}
 </style>
