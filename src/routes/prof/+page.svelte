@@ -5,7 +5,9 @@
 	import Footer from '$lib/footer/Footer.svelte';
 </script>
 
-<Header />
+<svelte:head>
+	<title>自己紹介じゃ</title>
+</svelte:head>
 
 <div class="profile">
 	<div><img src="1.3-FastAPI-Logo.jpg" alt="" /></div>
@@ -19,5 +21,3 @@
 		<li>現在に至る</li>
 	</ul>
 </div>
-
-<Footer />
