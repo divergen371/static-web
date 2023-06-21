@@ -15,8 +15,16 @@
 	<p>Created by fukMnk</p>
 </footer>
 
-<style>
-	h1 {
-		font-size: 2em;
+<style lang="scss">
+	header {
+		h1 {
+			font-size: 2em;
+		}
+	}
+
+	main {
+		.hello {
+			font-weight: bold;
+		}
 	}
 </style>
