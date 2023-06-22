@@ -1,7 +1,8 @@
 <script>
 	import Profile from '$lib/Profile/profile.svelte';
-    const myName = 'hoge';
-	const description = "It's me!!"
+	import { scale } from 'svelte/transition';
+	const myName = 'hoge';
+	const description = "It's me!!";
 </script>
 
 <svelte:head>
@@ -9,7 +10,7 @@
 </svelte:head>
 
 <div class="profile">
-	<div><img src="IMG_6060.PNG" alt="" /></div>
+	<div><img src="IMG_6060.PNG" alt="" transition:scale /></div>
 	<h1>{myName}</h1>
 	<div class="description">{description}</div>
 	<h2>経歴</h2>

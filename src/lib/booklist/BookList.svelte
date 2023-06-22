@@ -10,6 +10,15 @@
 		let res = await fetch(API + isbn);
 		return res.json();
 	};
+
+	const flags = {};
+	$favoriteBooks.split(',').forEach((num) => {
+		flags[num] = true;
+	});
+
+	const imageToggle = (key) => {
+		flags[key] = !flags[key];
+	};
 </script>
 
 <div>
@@ -21,11 +30,13 @@
 			{/each}
 		{/if}
 	{:then books}
-		<!-- promise was fulfilled -->
 		<p>データを取得しました</p>
 		{#each books as book}
 			<h3>{book.summary.title}</h3>
-			<img src={book.summary.cover} alt="書影" transition:scale />
+			<button on:click="{() => imageToggle(book.summary.isbn)}">Toggle</button>
+			{#if flags[book.summary.isbn]}
+				<img src={book.summary.cover} alt="書影" transition:scale />
+			{/if}
 			<hr />
 			{#if 'list' === pagetype}
 				<a href="/favoritebooks/{book.summary.isbn}">詳細ページへ</a>
